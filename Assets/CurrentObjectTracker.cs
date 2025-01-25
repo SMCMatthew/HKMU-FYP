@@ -20,8 +20,8 @@ public class CurrentObjectTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var interactorData = snapInteractable.SelectingInteractorViews.First().Data as MonoBehaviour;
-        print("AAA: " + interactorData.gameObject.name);
+        //var interactorData = snapInteractable.SelectingInteractorViews.First().Data as MonoBehaviour;
+        //print("AAA: " + interactorData.gameObject.name);
         //print("BBB: " + snapInteractable.SelectingInteractorViews.First().Data as MonoBehaviour.gameObject);
         //foreach (IInteractorView interactorView in snapInteractable.SelectingInteractorViews)
         //{
