@@ -10,6 +10,9 @@ public class BroomBehaviour : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //print("Colliding on: " + collision.gameObject.name);
-        //colorChanger.ChangeColor(collision.transform.GetChild(0).gameObject);
+        if (collision.transform.childCount > 0)
+        {
+            colorChanger.ChangeColor(collision.transform.GetChild(0).gameObject);
+        }
     }
 }

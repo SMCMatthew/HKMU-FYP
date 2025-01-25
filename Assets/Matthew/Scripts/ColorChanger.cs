@@ -40,11 +40,50 @@ public class ColorChanger : MonoBehaviour
             Renderer renderer = hitObject.GetComponent<Renderer>();
             if (renderer != null)
             {
-                Color startColor = new Color32(229, 181, 223, 255);
+                // Get the original color of the material
+                Color startColor = renderer.material.color;
+
+                // Define the target color
                 Color endColor = new Color32(0, 0, 0, 255);
-                Color color = Color.Lerp(startColor, endColor, currentProgress / 100f); // Change from startColor to endColor based on progress
+
+                // Interpolate between startColor and endColor
+                Color color = Color.Lerp(startColor, endColor, currentProgress / 100f);
+
+                // Update the material color
                 renderer.material.color = color;
             }
+
+            // Ensure hitObject is not null
+            //if (hitObject == null)
+            //{
+            //    Debug.LogError("hitObject is null. Ensure it is properly assigned.");
+            //    return;
+            //}
+
+            //// Try to get the Renderer
+            //Renderer renderer = hitObject.GetComponent<Renderer>();
+            //if (renderer != null)
+            //{
+            //    Debug.Log("Renderer found! Material color is: " + renderer.material.color);
+
+            //    // Get the original color of the material
+            //    Color startColor = renderer.material.color;
+
+            //    // Define the target color
+            //    Color endColor = new Color32(0, 0, 0, 255);
+
+            //    // Interpolate between startColor and endColor
+            //    Color color = Color.Lerp(startColor, endColor, currentProgress / 100f);
+
+            //    // Update the material color
+            //    renderer.material.color = color;
+
+            //    Debug.Log("Updated material color to: " + renderer.material.color);
+            //}
+            //else
+            //{
+            //    Debug.LogError("Renderer component not found on the hitObject.");
+            //}
         }
 
         void Update()

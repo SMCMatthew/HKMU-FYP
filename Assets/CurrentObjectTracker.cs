@@ -1,4 +1,5 @@
 using Oculus.Interaction;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,12 @@ public class CurrentObjectTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //var interactorData = snapInteractable.SelectingInteractorViews.First().Data as MonoBehaviour;
-        //print("AAA: " + interactorData.gameObject.name);
+        if (snapInteractable.SelectingInteractorViews.Any())
+        {
+            var interactorData = snapInteractable.SelectingInteractorViews.First().Data as MonoBehaviour;
+            print("AAA: " + interactorData.gameObject.name);
+        }
+
         //print("BBB: " + snapInteractable.SelectingInteractorViews.First().Data as MonoBehaviour.gameObject);
         //foreach (IInteractorView interactorView in snapInteractable.SelectingInteractorViews)
         //{
