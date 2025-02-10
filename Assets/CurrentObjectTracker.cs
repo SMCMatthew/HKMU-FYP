@@ -33,9 +33,16 @@ public class CurrentObjectTracker : MonoBehaviour
             print("AAA: " + interactorData.transform.parent.gameObject.name);
             currentObject = interactorData.transform.parent.gameObject;
         }
+        else currentObject = null;
+
+        if (currentObject == null)
+        {
+            print("false");
+            isCorrect = false;
+        }
 
         // Change the boolean if the currentObject is same as the requireObject
-        if (currentObject == requireObject)
+        if (currentObject.transform.name == requireObject.transform.name)
         {
             isCorrect = true;
             print("correct object");
