@@ -41,6 +41,7 @@ public class CurrentObjectTracker : MonoBehaviour
             isCorrect = false;
         }
 
+
         // Change the boolean if the currentObject is same as the requireObject
         if (currentObject.transform.name == requireObject.transform.name)
         {

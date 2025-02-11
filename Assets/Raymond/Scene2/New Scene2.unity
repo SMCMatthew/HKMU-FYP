@@ -364,7 +364,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1438923323}
+    m_TransformParent: {fileID: 4165286211324921066}
     m_Modifications:
     - target: {fileID: 100000, guid: 31f99d16c6cf30d408b04dcec6f5a857, type: 3}
       propertyPath: m_Name
@@ -1219,7 +1219,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1438923323}
+    m_TransformParent: {fileID: 4165286211324921066}
     m_Modifications:
     - target: {fileID: 100000, guid: 31f99d16c6cf30d408b04dcec6f5a857, type: 3}
       propertyPath: m_Name
@@ -1389,12 +1389,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerOrigin: {fileID: 1723026654}
   _playerHead: {fileID: 1723026656}
---- !u!4 &1438923323 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 260047766253212961, guid: 24108ceec40bc6a4488aedc2322935cc,
-    type: 3}
-  m_PrefabInstance: {fileID: 4203531554060947915}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1499541868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,7 +1680,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1438923323}
+    m_TransformParent: {fileID: 4165286211324921066}
     m_Modifications:
     - target: {fileID: 100000, guid: 1ca5316dd08051f42b31052d31beefed, type: 3}
       propertyPath: m_Name
@@ -2196,7 +2190,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1438923323}
+    m_TransformParent: {fileID: 4165286211324921066}
     m_Modifications:
     - target: {fileID: 100000, guid: 31f99d16c6cf30d408b04dcec6f5a857, type: 3}
       propertyPath: m_Name
@@ -2364,6 +2358,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fingerFeatureStateProvider: {fileID: 1723026677}
+--- !u!4 &4165286211324921066 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 260047766253212961, guid: 24108ceec40bc6a4488aedc2322935cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4203531554060947915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4203531554060947915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2426,6 +2426,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gaia Terrains
+      objectReference: {fileID: 0}
+    - target: {fileID: 1479963849180754942, guid: 24108ceec40bc6a4488aedc2322935cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6088343425349659026, guid: 24108ceec40bc6a4488aedc2322935cc,
         type: 3}
@@ -2536,6 +2541,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2131935691974208752, guid: a4d40c1bb6d17994084b9f4308a6f622,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8280757341916886457, guid: a4d40c1bb6d17994084b9f4308a6f622,
         type: 3}
       propertyPath: m_Name
@@ -2544,7 +2554,7 @@ PrefabInstance:
     - target: {fileID: 8280757341916886457, guid: a4d40c1bb6d17994084b9f4308a6f622,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
