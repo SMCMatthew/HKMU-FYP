@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] answer;
 
+    public bool isAllCorrect;
+
     void Start()
     {
         
@@ -20,5 +22,10 @@ public class GameManager : MonoBehaviour
         {
             gameObjects[i].requireObject = answer[i].gameObject;
         }
+    }
+
+    void CheckAnswer()
+    {
+
     }
 }
