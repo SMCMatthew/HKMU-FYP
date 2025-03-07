@@ -55,6 +55,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _DetailNormalMapScale: 0.5
+    - _Smoothness: 1
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &8778410688911348800
