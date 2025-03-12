@@ -29,17 +29,27 @@ public class CurrentObjectTracker : MonoBehaviour
         if (!isLerping)
         {
             print("flash");
-            StartCoroutine(LerpAlpha());
+            StartCoroutine(LerpAlpha(new Color(255, 0, 40)));
+        }
+    }
+
+    public void MissingInk()
+    {
+        print("missing ink");
+        if (!isLerping)
+        {
+            print("flash");
+            StartCoroutine(LerpAlpha(new Color(10, 255, 0)));
         }
     }
 
     // Flash the Grid Block when a wrong answer is applied
-    private IEnumerator LerpAlpha()
+    private IEnumerator LerpAlpha(Color color)
     {
         isLerping = true;
 
         // Set the target color to fully opaque
-        targetColor = initialColor;
+        targetColor = color;
         targetColor.a = 1f; // Set target alpha to 1 (fully opaque)
 
         // Lerp to fully opaque

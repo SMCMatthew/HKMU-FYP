@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Oculus.Interaction;
 using Unity.VisualScripting;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,9 +11,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] answer;
 
-
-
     public bool isAllCorrect;
+
+    public bool isAllInked;
 
     void Start()
     {
@@ -29,6 +30,15 @@ public class GameManager : MonoBehaviour
         {
             gameObjects[i].requireObject = answer[i].gameObject;
         }
+
+        // Print the word if all Block is correct and every Block is inked
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (isAllCorrect && isAllInked)
+            {
+                PrintWord();
+            }
+        }
     }
 
     public void CheckAnswer()
@@ -44,6 +54,61 @@ public class GameManager : MonoBehaviour
             {
                 gameObjects[i].isWrongAnswer();
                 isAllCorrect = false;
+            }
+        }
+    }
+
+    // Check if the word is filled with ink
+    public void CheckIfInked()
+    {
+        for (int i = 0; i < gameObjects.Length; i++)
+        {
+            if (gameObjects[i].GetComponent<CurrentObjectTracker>().currentObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color != new Color32(0, 0, 0, 255))
+            {
+                gameObjects[i].MissingInk();
+            }
+        }         
+    }
+
+    public GameObject paperPrefab; // Prefab for the paper
+    public Transform printPosition; // Position where the paper will appear
+    public string wordToPrint;
+    public TextMeshProUGUI textMesh;
+
+    // Method to handle printing
+    public void PrintWord()
+    {
+
+        for (int i = 0; i < gameObjects.Length; i++)
+        {
+            if (gameObjects[i].currentObject != null)
+            {
+                if ((i + 1) % 8 == 0) wordToPrint += "\n";
+
+                // Make empty when the block is "Space"
+                if (gameObjects[i].currentObject.name == "Space" || gameObjects[i].currentObject.name == "Space(Clone)" || gameObjects[i].currentObject == null)
+                {
+                    wordToPrint += " ";
+                }
+                else if (gameObjects[i].currentObject.name.Contains("(Clone)"))
+                {
+                    wordToPrint += gameObjects[i].currentObject.name.Replace("(Clone)", string.Empty);
+                }
+                else
+                {
+                    wordToPrint += gameObjects[i].currentObject.name;
+                }
+            }
+        }
+
+        if (!string.IsNullOrEmpty(wordToPrint))
+        {
+            // Set the printed word on the paper
+            /*TextMeshProUGUI */textMesh = paperPrefab.GetComponentInChildren<TextMeshProUGUI>();
+            // Alternatively, use a UI Text component if you're using UI
+            if (textMesh != null)
+            {
+                textMesh.text = wordToPrint;
             }
         }
     }
