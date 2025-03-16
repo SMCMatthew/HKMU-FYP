@@ -29,7 +29,7 @@ public class CurrentObjectTracker : MonoBehaviour
         if (!isLerping)
         {
             print("flash");
-            StartCoroutine(LerpAlpha(new Color(255, 0, 40)));
+            StartCoroutine(LerpAlpha(new Color(255, 0, 0)));
         }
     }
 
@@ -38,7 +38,7 @@ public class CurrentObjectTracker : MonoBehaviour
         print("missing ink");
         if (!isLerping)
         {
-            print("flash");
+            print("flash ink");
             StartCoroutine(LerpAlpha(new Color(10, 255, 0)));
         }
     }

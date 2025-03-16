@@ -63,7 +63,8 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < gameObjects.Length; i++)
         {
-            if (gameObjects[i].GetComponent<CurrentObjectTracker>().currentObject.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color != new Color32(0, 0, 0, 255))
+            GameObject gameObject = gameObjects[i].GetComponentInParent<GameObject>().GetComponent<CurrentObjectTracker>().currentObject.transform.GetChild(0).gameObject;
+            if (gameObject.GetComponent<Renderer>().material.color != new Color32(0, 0, 0, 255))
             {
                 gameObjects[i].MissingInk();
             }
