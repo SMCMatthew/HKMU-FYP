@@ -34,10 +34,11 @@ public class GameManager : MonoBehaviour
         // Print the word if all Block is correct and every Block is inked
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (isAllCorrect && isAllInked)
-            {
-                PrintWord();
-            }
+            PrintWord();
+            //if (isAllCorrect && isAllInked)
+            //{
+            //    PrintWord();
+            //}
         }
     }
 
@@ -75,11 +76,11 @@ public class GameManager : MonoBehaviour
     public Transform printPosition; // Position where the paper will appear
     public string wordToPrint;
     public TextMeshProUGUI textMesh;
+    public Animator wordContainerAnimator;
 
     // Method to handle printing
     public void PrintWord()
     {
-
         for (int i = 0; i < gameObjects.Length; i++)
         {
             if (gameObjects[i].currentObject != null)

@@ -9,6 +9,7 @@ TagManager:
   - letters
   - lb_groundTarget
   - Paper
+  - WordContainer
   layers:
   - Default
   - TransparentFX
