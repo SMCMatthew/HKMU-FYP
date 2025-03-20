@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class WordContainerPrintTrigger : MonoBehaviour
 {
     public Animator wordContainerAnimator;
+
+    TextMeshPro TextMeshPro;
+
+    public bool isPrinted = false;
 
     private void Start()
     {
@@ -14,19 +19,20 @@ public class WordContainerPrintTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "WordContainer")
+        if (other.transform.tag == "WordContainer" && !isPrinted)
         {
             wordContainerAnimator.enabled = true;
             print("hit print trigger");
-            wordContainerAnimator.Play("Printing"); 
+            wordContainerAnimator.Play("Printing");
+            isPrinted = true;
         }
     }
 
-    private void Update()
-    {
-       // if (wordContainerAnimator.enabled && !wordContainerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Printing"))
-        //{
-        //    wordContainerAnimator.enabled = false;
-       // }
+    private void LateUpdate()
+    { 
+        if (wordContainerAnimator.enabled && !wordContainerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Printing"))
+        {
+            wordContainerAnimator.enabled = false;
+        }
     }
 }

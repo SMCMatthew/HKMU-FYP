@@ -62,12 +62,15 @@ public class GameManager : MonoBehaviour
     // Check if the word is filled with ink
     public void CheckIfInked()
     {
+        isAllInked = true;
+
         for (int i = 0; i < gameObjects.Length; i++)
         {
             GameObject gameObject = gameObjects[i].GetComponentInParent<GameObject>().GetComponent<CurrentObjectTracker>().currentObject.transform.GetChild(0).gameObject;
             if (gameObject.GetComponent<Renderer>().material.color != new Color32(0, 0, 0, 255))
             {
                 gameObjects[i].MissingInk();
+                isAllInked = false;
             }
         }         
     }
@@ -91,6 +94,22 @@ public class GameManager : MonoBehaviour
                 if (gameObjects[i].currentObject.name == "Space" || gameObjects[i].currentObject.name == "Space(Clone)" || gameObjects[i].currentObject == null)
                 {
                     wordToPrint += " ";
+                }
+                else if (gameObjects[i].currentObject.name == "Comma" || gameObjects[i].currentObject.name == "Comma(Clone)")
+                {
+                    wordToPrint += ",";
+                }
+                else if (gameObjects[i].currentObject.name == "Point" || gameObjects[i].currentObject.name == "Point(Clone)")
+                {
+                    wordToPrint += ".";
+                }
+                else if (gameObjects[i].currentObject.name == "Exclamation Mark" || gameObjects[i].currentObject.name == "Exclamation Mark(Clone)")
+                {
+                    wordToPrint += "!";
+                }
+                else if (gameObjects[i].currentObject.name == "Question Mark" || gameObjects[i].currentObject.name == "Question Mark(Clone)")
+                {
+                    wordToPrint += "?";
                 }
                 else if (gameObjects[i].currentObject.name.Contains("(Clone)"))
                 {

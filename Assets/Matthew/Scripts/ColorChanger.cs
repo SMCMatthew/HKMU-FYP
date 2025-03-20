@@ -29,12 +29,11 @@ public class ColorChanger : MonoBehaviour
         }
 
         float currentProgress = letterColorProgress[hitObject];
-        if (currentProgress < 100f && energy > minEnergy)
+        if (currentProgress < 100f)
         {
             Debug.Log("Hit letter: " + hitObject.name); // Debug message
             currentProgress += colorChangeSpeed * Time.deltaTime * 5f; // Increase color transfer progress
             letterColorProgress[hitObject] = Mathf.Min(currentProgress, 100f); // Make sure the progress does not exceed 100%
-            energy = Mathf.Max(minEnergy, energy - 0.5f); // Each stroke reduces energy by 1%
 
             // Update letter color
             Renderer renderer = hitObject.GetComponent<Renderer>();
@@ -139,12 +138,11 @@ public class ColorChanger : MonoBehaviour
                     }
 
                     float currentProgress = letterColorProgress[hitObject];
-                    if (currentProgress < 100f && energy > minEnergy)
+                    if (currentProgress < 100f)
                     {
                         Debug.Log("Hit letter: " + hitObject.name); // Debug message
                         currentProgress += colorChangeSpeed * Time.deltaTime * 5f; // Increase color transfer progress
                         letterColorProgress[hitObject] = Mathf.Min(currentProgress, 100f); // Make sure the progress does not exceed 100%
-                        energy = Mathf.Max(minEnergy, energy - 0.5f); // Each stroke reduces energy by 1%
 
                         // Update letter color
                         Renderer renderer = hitObject.GetComponent<Renderer>();
