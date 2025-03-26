@@ -18,10 +18,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Set the array automaticly
-        for (int i = 0; i < gameObjects.Length; i++)
-        {
-            gameObjects[i] = GameObject.Find("/WordContainer/GridParent/GridPlaceHolder/GridBlock (" + (i + 1) + ")/Snap Interactable " + (i + 1)).GetComponent<CurrentObjectTracker>();
-        }
+        //for (int i = 0; i < gameObjects.Length; i++)
+        //{
+        //    gameObjects[i] = GameObject.Find("WordContainer/GridParent/GridPlaceHolder/GridBlock (" + (i + 1) + ")/Snap Interactable " + (i + 1)).GetComponent<CurrentObjectTracker>();
+        //}
     }
 
     private void Update()
