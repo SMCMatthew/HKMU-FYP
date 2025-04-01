@@ -9,11 +9,23 @@ public class GameManager : MonoBehaviour
 {
     public CurrentObjectTracker[] gameObjects; // Array to hold references to the GameObjects
 
-    public GameObject[] answer;
+    public int currentQuestion = 1;
 
-    public bool isAllCorrect;
+    public GameObject[] answer1;
+    public bool isAllCorrect1;
+    public bool isAllInked1;
 
-    public bool isAllInked;
+    public GameObject[] answer2;
+    public bool isAllCorrect2;
+    public bool isAllInked2;
+
+    public GameObject[] answer3;
+    public bool isAllCorrect3;
+    public bool isAllInked3;
+
+    public Animator workTableAnimator;
+    public Animator workTable2Animator;
+    public Animator tutorialAnimator;
 
     void Start()
     {
@@ -26,10 +38,32 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < gameObjects.Length; i++)
+        switch (currentQuestion)
         {
-            gameObjects[i].requireObject = answer[i].gameObject;
-        }
+            case 1:
+                // Set the answer for question 1
+                for (int i = 0; i < gameObjects.Length; i++)
+                {
+                    gameObjects[i].requireObject = answer1[i].gameObject;
+                }
+            break;
+            case 2:
+                // Set the answer for question 1
+                for (int i = 0; i < gameObjects.Length; i++)
+                {
+                    gameObjects[i].requireObject = answer2[i].gameObject;
+                }
+            break;
+            case 3:
+                // Set the answer for question 1
+                for (int i = 0; i < gameObjects.Length; i++)
+                {
+                    gameObjects[i].requireObject = answer3[i].gameObject;
+                }
+            break;
+        }      
+
+        // Finish question 1, then change requireObject's answers to next question
 
         // Print the word if all Block is correct and every Block is inked
         if (Input.GetKeyDown(KeyCode.P))
@@ -40,13 +74,20 @@ public class GameManager : MonoBehaviour
             //    PrintWord();
             //}
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //workTableAnimator.Play("WorkTableAndObjectSet");
+            //workTable2Animator.Play("WorkTable2");
+            tutorialAnimator.Play("TutorialObject");
+        }
     }
 
     public void CheckAnswer()
     {
         print("check");
 
-        isAllCorrect = true;
+        isAllCorrect1 = true;
 
         for (int i = 0; i < gameObjects.Length; i++)
         {
@@ -54,7 +95,7 @@ public class GameManager : MonoBehaviour
             if (!answer)
             {
                 gameObjects[i].isWrongAnswer();
-                isAllCorrect = false;
+                isAllCorrect1 = false;
             }
         }
     }
@@ -62,7 +103,7 @@ public class GameManager : MonoBehaviour
     // Check if the word is filled with ink
     public void CheckIfInked()
     {
-        isAllInked = true;
+        isAllInked1 = true;
 
         for (int i = 0; i < gameObjects.Length; i++)
         {
@@ -70,7 +111,7 @@ public class GameManager : MonoBehaviour
             if (gameObject.GetComponent<Renderer>().material.color != new Color32(0, 0, 0, 255))
             {
                 gameObjects[i].MissingInk();
-                isAllInked = false;
+                isAllInked1 = false;
             }
         }         
     }
