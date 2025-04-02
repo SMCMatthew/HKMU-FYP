@@ -8749,50 +8749,19 @@ MonoBehaviour:
   - {fileID: 7305011555861863216}
   - {fileID: 1483889707974320688}
   - {fileID: 6658343670175633350}
-  answer:
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 1657458156}
-  - {fileID: 1702265696}
-  - {fileID: 1604742726}
-  - {fileID: 1604742726}
-  - {fileID: 1679603727}
-  - {fileID: 572539152}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  - {fileID: 812154424}
-  isAllCorrect: 0
-  isAllInked: 0
+  currentQuestion: 1
+  answer1: []
+  isAllCorrect1: 0
+  isAllInked1: 0
+  answer2: []
+  isAllCorrect2: 0
+  isAllInked2: 0
+  answer3: []
+  isAllCorrect3: 0
+  isAllInked3: 0
   workTableAnimator: {fileID: 0}
+  workTable2Animator: {fileID: 0}
+  tutorialAnimator: {fileID: 0}
   paperPrefab: {fileID: 1156391264}
   printPosition: {fileID: 0}
   wordToPrint: 
@@ -10610,12 +10579,6 @@ Transform:
   - {fileID: 1025488520}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &572539152 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3399378384022727420, guid: 8f975c187e346af4fa1546c2b5d6c738,
-    type: 3}
-  m_PrefabInstance: {fileID: 5602810673008613640}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &597851559
 GameObject:
   m_ObjectHideFlags: 0
@@ -13356,12 +13319,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4186de02d48caa945889fe7583a33af6, type: 3}
---- !u!1 &812154424 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8812372110406948286, guid: 8f975c187e346af4fa1546c2b5d6c738,
-    type: 3}
-  m_PrefabInstance: {fileID: 5602810673008613640}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &819449232 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9014170783809206332, guid: 895f6f3c2d334633b5800312285058d2,
@@ -28371,12 +28328,6 @@ MonoBehaviour:
   _defaultInteractable: {fileID: 0}
   _timeOutInteractable: {fileID: 0}
   _timeOut: 0
---- !u!1 &1604742726 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3573589925807680607, guid: 8f975c187e346af4fa1546c2b5d6c738,
-    type: 3}
-  m_PrefabInstance: {fileID: 5602810673008613640}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1608191292
 GameObject:
   m_ObjectHideFlags: 0
@@ -29107,12 +29058,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -179.878, y: 360.711, z: -271.11902}
---- !u!1 &1657458156 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2607404490785246493, guid: 8f975c187e346af4fa1546c2b5d6c738,
-    type: 3}
-  m_PrefabInstance: {fileID: 5602810673008613640}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1662529730
 GameObject:
   m_ObjectHideFlags: 0
@@ -29658,12 +29603,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &1679603727 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 514740854550925880, guid: 8f975c187e346af4fa1546c2b5d6c738,
-    type: 3}
-  m_PrefabInstance: {fileID: 5602810673008613640}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1680937251
 GameObject:
   m_ObjectHideFlags: 0
@@ -29751,12 +29690,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6598215814014716735}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1702265696 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4992599292484452080, guid: 8f975c187e346af4fa1546c2b5d6c738,
-    type: 3}
-  m_PrefabInstance: {fileID: 5602810673008613640}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1725540115
 GameObject:
   m_ObjectHideFlags: 0
