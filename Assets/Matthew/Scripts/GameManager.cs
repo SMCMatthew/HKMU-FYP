@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public Animator workTableAnimator;
     public Animator workTable2Animator;
     public Animator tutorialAnimator;
+    public Animator museumObjectAnimator;
 
     void Start()
     {
@@ -80,6 +81,7 @@ public class GameManager : MonoBehaviour
             //workTableAnimator.Play("WorkTableAndObjectSet");
             //workTable2Animator.Play("WorkTable2");
             tutorialAnimator.Play("TutorialObject");
+            museumObjectAnimator.Play("UniqueObjectMoveAway");
         }
     }
 
