@@ -7,6 +7,6 @@ public class LoadScene : MonoBehaviour
 {
     private void OnEnable()
     {
-        SceneManager.LoadScene("TimeTravelScene",LoadSceneMode.Single);
+        SceneManager.LoadScene("M_TimeTravelScene",LoadSceneMode.Single);
     }
 }

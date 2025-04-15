@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-7739629572257002973
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: ed078a68df49deb4c9f44dcb3d7ad296
+  m_EffectName: Attenuation
+  m_MixLevel: 2a1b66613cc6efb47ae7f0bd49d0ac32
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!243 &-7050069618820364629
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ForestBGM
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 03460a775b15b804d8ef7ae5f43427cb
+  m_Children: []
+  m_Volume: f5100d447a614b14f8c7b38ff5b05342
+  m_Pitch: 3d15b65bc4966a646a4004ee14ba2f53
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -7739629572257002973}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!244 &-5472620889706011717
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -36,6 +69,7 @@ AudioMixerController:
     - ef49c6988651e9449ac803a5487215c9
     - e4fbc394d71400a44be1006d0976e701
     - 5f2fa30c7fe8b50459429cea17c5c0da
+    - 03460a775b15b804d8ef7ae5f43427cb
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -52,6 +86,7 @@ AudioMixerGroupController:
   - {fileID: 4314897003947687645}
   - {fileID: 8112232312894197811}
   - {fileID: 7049570740650786468}
+  - {fileID: -7050069618820364629}
   m_Volume: ed0aeeb4e02102e49a3b8b1bf83b6334
   m_Pitch: cf74ead6ad964bb449fdfb273178cc0f
   m_Send: 00000000000000000000000000000000
@@ -85,7 +120,9 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 60379498c1a646842af9c18d036883c7
   m_FloatValues:
-    1a9936e308388ac4798ba32ba6d055ef: 7.7418165
+    823ff11157a7826458c3bd77e607c8ac: 0.60032254
+    1a9936e308388ac4798ba32ba6d055ef: -13.17684
+    f5100d447a614b14f8c7b38ff5b05342: -20.748377
     ed0aeeb4e02102e49a3b8b1bf83b6334: -1.9655449
     c3aa080e16cd88646a7f32812ba733a0: 1.9504393
   m_TransitionOverrides: {}
