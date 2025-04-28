@@ -8750,7 +8750,47 @@ MonoBehaviour:
   - {fileID: 1483889707974320688}
   - {fileID: 6658343670175633350}
   currentQuestion: 1
-  answer1: []
+  answer1:
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
+  - {fileID: 5602810673008613641}
   isAllCorrect1: 0
   isAllInked1: 0
   answer2: []
@@ -8762,6 +8802,7 @@ MonoBehaviour:
   workTableAnimator: {fileID: 0}
   workTable2Animator: {fileID: 0}
   tutorialAnimator: {fileID: 0}
+  museumObjectAnimator: {fileID: 0}
   paperPrefab: {fileID: 1156391264}
   printPosition: {fileID: 0}
   wordToPrint: 
@@ -37815,6 +37856,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f975c187e346af4fa1546c2b5d6c738, type: 3}
+--- !u!1 &5602810673008613641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7453218486629401807, guid: 8f975c187e346af4fa1546c2b5d6c738,
+    type: 3}
+  m_PrefabInstance: {fileID: 5602810673008613640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5627598973030310629 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5627598973000415319, guid: f54012181eacade4ea242c65f804720f,

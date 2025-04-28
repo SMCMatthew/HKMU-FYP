@@ -12,7 +12,9 @@ public class BroomBehaviour : MonoBehaviour
         colorChanger = GameObject.Find("ColorChanger").GetComponent<ColorChanger>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+
+    private void OnTriggerEnter(Collider collision)
     {
         //print("Colliding on: " + collision.gameObject.name);
         if (collision.gameObject.tag == "Letter" && collision.transform.childCount > 0)

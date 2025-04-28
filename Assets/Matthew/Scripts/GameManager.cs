@@ -102,6 +102,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ChangeQuestion()
+    {
+
+    }
+
     // Check if the word is filled with ink
     public void CheckIfInked()
     {
