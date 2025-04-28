@@ -19,6 +19,7 @@ public class WordContainerPrintTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("aaa");
         if (other.transform.tag == "WordContainer" && !isPrinted)
         {
             wordContainerAnimator.enabled = true;

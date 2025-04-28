@@ -16,10 +16,10 @@ public class BroomBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        //print("Colliding on: " + collision.gameObject.name);
-        if (collision.gameObject.tag == "Letter" && collision.transform.childCount > 0)
+        print("Colliding on: " + collision.gameObject.name);
+        if (collision.gameObject.tag == "Letter" /*&& collision.transform.childCount > 0*/)
         {
-            colorChanger.ChangeColor(collision.transform.GetChild(0).gameObject);
+            colorChanger.ChangeColor(collision.transform.gameObject);
         }
     }
 }
