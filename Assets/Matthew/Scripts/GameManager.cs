@@ -10,6 +10,12 @@ public class GameManager : MonoBehaviour
     public CurrentObjectTracker[] gameObjects; // Array to hold references to the GameObjects
 
     public int currentQuestion = 1;
+    public GameObject paper1;
+    public GameObject paper2;
+    public GameObject paper3;
+    public GameObject answerPaper1;
+    public GameObject answerPaper2;
+    public GameObject answerPaper3;
 
     public GameObject[] answer1;
     public bool isAllCorrect1;
@@ -102,9 +108,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ChangeQuestion()
+    public void ChangeQuestion2()
     {
+        paper1.SetActive(false);
+        answerPaper1.SetActive(false);
+        paper3.SetActive(false);
+        answerPaper3.SetActive(false);
+        paper2.SetActive(true);
+        answerPaper2.SetActive(true);
+    }
 
+    public void ChangeQuestion3()
+    {
+        paper1.SetActive(false);
+        answerPaper1.SetActive(false);
+        paper2.SetActive(false);
+        answerPaper2.SetActive(false);
+        paper3.SetActive(true);
+        answerPaper3.SetActive(true);
     }
 
     // Check if the word is filled with ink
@@ -168,6 +189,8 @@ public class GameManager : MonoBehaviour
                     wordToPrint += gameObjects[i].currentObject.name;
                 }
             }
+
+            currentQuestion++;
         }
 
         if (!string.IsNullOrEmpty(wordToPrint))
