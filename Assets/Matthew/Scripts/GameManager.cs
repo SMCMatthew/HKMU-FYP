@@ -4,6 +4,7 @@ using UnityEngine;
 using Oculus.Interaction;
 using Unity.VisualScripting;
 using TMPro;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -41,6 +42,9 @@ public class GameManager : MonoBehaviour
         //{
         //    gameObjects[i] = GameObject.Find("WordContainer/GridParent/GridPlaceHolder/GridBlock (" + (i + 1) + ")/Snap Interactable " + (i + 1)).GetComponent<CurrentObjectTracker>();
         //}
+
+        //rotateAnimator.speed = 0;
+        //rotateAnimator.Play(rotateClip.name, 0, 0f);
     }
 
     private void Update()
@@ -70,8 +74,6 @@ public class GameManager : MonoBehaviour
             break;
         }      
 
-        // Finish question 1, then change requireObject's answers to next question
-
         // Print the word if all Block is correct and every Block is inked
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -87,7 +89,34 @@ public class GameManager : MonoBehaviour
             //workTableAnimator.Play("WorkTableAndObjectSet");
             //workTable2Animator.Play("WorkTable2");
             tutorialAnimator.Play("TutorialObject");
-            museumObjectAnimator.Play("UniqueObjectMoveAway");
+            museumObjectAnimator.Play("Tutorial");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            RotateMuseumObject();
+        }
+
+        // For museum object rotation
+        if (isRotating)
+        {
+            rotateTimeCount += Time.deltaTime;
+        }
+
+        // Stop the animation once time is reach
+        if ((int)Math.Floor(rotateTimeCount) > lastStopSecond)
+        {
+            print("number: " + (int)Math.Floor(rotateTimeCount));
+            rotateAnimator.speed = 0;
+            isRotating = false;
+        }
+        lastStopSecond = (int)Math.Floor(rotateTimeCount);
+
+        // Reset rotate timer
+        if (rotateTimeCount > 5f)
+        {
+            rotateTimeCount = 0f;
+            rotateAnimator.Play("RightRotate", 0, 0f);
         }
     }
 
@@ -106,6 +135,20 @@ public class GameManager : MonoBehaviour
                 isAllCorrect1 = false;
             }
         }
+    }
+
+    public Animator rotateAnimator; // 動畫控制器
+    public float[] keyframeTimes; 
+    public int currentKeyframeIndex = 0; 
+    public bool isRotating = false;
+    public float rotateTimeCount = 0f;
+    private int lastStopSecond = 0;
+
+    public void RotateMuseumObject()
+    {
+        isRotating = true;
+        rotateAnimator.speed = 1f;
+        rotateAnimator.Play("RightRotate");
     }
 
     public void ChangeQuestion2()
