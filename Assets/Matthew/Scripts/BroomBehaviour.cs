@@ -19,6 +19,7 @@ public class BroomBehaviour : MonoBehaviour
         print("Colliding on: " + collision.gameObject.name);
         if (collision.gameObject.tag == "Letter" /*&& collision.transform.childCount > 0*/)
         {
+            print("can fill Colliding on: " + collision.gameObject.name);
             colorChanger.ChangeColor(collision.transform.gameObject);
         }
     }
