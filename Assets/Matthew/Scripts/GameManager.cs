@@ -59,14 +59,14 @@ public class GameManager : MonoBehaviour
                 }
             break;
             case 2:
-                // Set the answer for question 1
+                // Set the answer for question 2
                 for (int i = 0; i < gameObjects.Length; i++)
                 {
                     gameObjects[i].requireObject = answer2[i].gameObject;
                 }
             break;
             case 3:
-                // Set the answer for question 1
+                // Set the answer for question 3
                 for (int i = 0; i < gameObjects.Length; i++)
                 {
                     gameObjects[i].requireObject = answer3[i].gameObject;
