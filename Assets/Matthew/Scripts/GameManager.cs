@@ -92,9 +92,24 @@ public class GameManager : MonoBehaviour
             museumObjectAnimator.Play("Tutorial");
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    RotateMuseumObject();
+        //}
+
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            RotateMuseumObject();
+            ChangeQuestion2();
+        }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            ChangeQuestion3();
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            ToEndingScene();
         }
 
         // For museum object rotation
@@ -191,6 +206,15 @@ public class GameManager : MonoBehaviour
                 isAllInked1 = false;
             }
         }         
+    }
+
+    public Animator endSceneObjectAnimator;
+    public Animator endSceneTextAnimtor;
+
+    public void ToEndingScene()
+    {
+        endSceneObjectAnimator.Play("FadeToBlack");
+        endSceneTextAnimtor.Play("FadeToWhite");
     }
 
     public GameObject paperPrefab; // Prefab for the paper
