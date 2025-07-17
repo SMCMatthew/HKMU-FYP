@@ -120,6 +120,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ToPrintingSection()
+    {
+        tutorialAnimator.Play("TutorialObject");
+        museumObjectAnimator.Play("Tutorial");
+    }
+
     public void CheckAnswer()
     {
         print("check");
